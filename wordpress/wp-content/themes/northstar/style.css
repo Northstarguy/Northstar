@@ -1,0 +1,292 @@
+/*
+Theme Name: Northstar Mentorship
+Theme URI: https://northstar.org
+Author: Northstar Digital Team
+Description: Performance-focused WordPress theme for a youth mentorship nonprofit.
+Version: 1.0.0
+Text Domain: northstar
+*/
+
+:root {
+  --ns-night: #041433;
+  --ns-night-soft: #0b2559;
+  --ns-royal: #1544b3;
+  --ns-cyan: #4ec5ff;
+  --ns-star: #f7f9ff;
+  --ns-gold: #f8cf67;
+  --ns-text: #e8efff;
+  --ns-ink: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--ns-text);
+  background: radial-gradient(circle at 50% -10%, #1e4ba9 0%, #071334 52%, #020611 100%);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 999;
+  background: #fff;
+  color: #000;
+  padding: 0.5rem 1rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  background: rgba(1, 9, 30, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 20;
+}
+
+.container {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 74px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.brand-mark {
+  width: 42px;
+  aspect-ratio: 1;
+  background: linear-gradient(140deg, #1f66ff, #58d1ff);
+  clip-path: polygon(50% 0%, 60% 35%, 100% 35%, 68% 57%, 80% 100%, 50% 70%, 20% 100%, 32% 57%, 0% 35%, 40% 35%);
+  box-shadow: 0 0 24px rgba(111, 187, 255, 0.6);
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--ns-text);
+  font-size: 1.4rem;
+}
+
+.primary-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+.primary-menu a {
+  padding: 0.65rem 0.95rem;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.primary-menu a:hover,
+.primary-menu a:focus-visible {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn,
+.wp-block-button__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #286cff 0%, #51cdff 100%);
+  color: #031333;
+}
+
+.btn-secondary {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero {
+  position: relative;
+  overflow: clip;
+  padding: 5rem 0 4rem;
+}
+
+.sparkle-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: #cfdeff;
+  max-width: 58ch;
+}
+
+.hero-card {
+  background: linear-gradient(180deg, rgba(10, 36, 93, 0.8), rgba(3, 16, 44, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 1.35rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.stats-grid,
+.value-grid,
+.offer-grid,
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section h2 {
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  margin-bottom: 0.65rem;
+}
+
+.section-intro {
+  color: #d3e0ff;
+  max-width: 70ch;
+  margin-bottom: 2rem;
+}
+
+.panel {
+  background: linear-gradient(180deg, rgba(8, 28, 75, 0.9), rgba(4, 16, 44, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 1.1rem;
+}
+
+.panel h3 {
+  margin-top: 0;
+}
+
+.kpi {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  margin: 0;
+  color: #ffffff;
+}
+
+.kpi-label {
+  margin: 0;
+  color: #c5d5fa;
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem 0;
+  color: #b8c8ee;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  background: rgba(8, 17, 42, 0.75);
+  color: #fff;
+  padding: 0.75rem;
+}
+
+textarea {
+  min-height: 140px;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .stats-grid,
+  .value-grid,
+  .offer-grid,
+  .steps-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .primary-menu {
+    position: absolute;
+    top: 74px;
+    right: 4vw;
+    left: 4vw;
+    padding: 0.8rem;
+    background: rgba(4, 16, 45, 0.97);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    flex-direction: column;
+    display: none;
+  }
+
+  .primary-menu.is-open {
+    display: flex;
+  }
+}
